@@ -30,9 +30,7 @@ int nombreJoueurs = 7;
 int id = 7;
 joueur j;
 
-
 //------------------------------------------------------------------------------------------------------------------
-
 
 void ajouterJ()
 {
@@ -180,28 +178,6 @@ void triParAge()
                joueurs[i].statut);
     }
 }
-void triparposte(){
-    printf(---------);
-    count=1
-    if(strcasecmp(joueur[i].poste,"intitule")){
-
-
-    }
-   
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //-----------------------------------------------------------------------
 
@@ -284,36 +260,6 @@ void triParPoste()
     }
     printf("\n");
 }
-void supprimer(){
-    char idk[20];
-    scanf("s",&idk);
-    for(i=0;i<nmbr;i++){
-        if(strcasecmp(idk,joueur|i).id){
-            joueurs=joueur[i+1];
-        for(int j=;i<nbrejoueur;i++){
-            joueur[j]=joueur[j+1];
-            nmbrejoueur--;
-            trouvé=1
-
-        }
-
-        }
-    }
-    if(§)
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //---------------------------------------------------------------------------------------------------------------------------------------
@@ -323,12 +269,10 @@ void supprimerJ()
     int trouve = 0;
     printf("saisir id \n");
     scanf("%s", idj);
-    for (int i = 0; i < nombreJoueurs; i++)
-    {
+    for (int i = 0; i < nombreJoueurs; i++){
         if (strcasecmp(joueurs[i].id, idj) == 0)
         {
-            for (int j = i; j < nombreJoueurs - 1; j++)
-            {
+            for (int j = i; j < nombreJoueurs - 1; j++){
                 joueurs[j] = joueurs[j + 1];
             }
             nombreJoueurs--;
@@ -396,7 +340,7 @@ void modifierNombreButs()
 {
     char idj[10];
     int trouve = 0;
-    int star=0;
+    int star = 0;
     printf("saisir id \n");
     scanf("%s", idj);
     for (int i = 0; i < nombreJoueurs; i++)
@@ -409,18 +353,18 @@ void modifierNombreButs()
             trouve = 1;
             printf("Les Buts du joueur %s (%s) a ete modifie avec succes.\n", joueurs[i].nom, joueurs[i].id);
         }
-        if(joueurs[i].buts>=10){
+        if (joueurs[i].buts >= 10)
+        {
             printf("Félicitations  C'est la star de l'équipe ! \n");
-}
-
         }
     }
-  
 
-    if (!trouve)
-    {
-        printf("Aucun joueur trouve avec l ID %s \n", idj);
-    }
+if (!trouve)
+{
+    printf("Aucun joueur trouve avec l ID %s \n", idj);
+}
+}
+
 
 //-----------------------------------------------------------------------
 
@@ -511,7 +455,7 @@ void rechercherParNom()
                    joueurs[i].statut);
             trouve = 1;
             break;
-             }
+        }
     }
     if (!trouve)
     {
@@ -709,25 +653,27 @@ void afficherj()
 }
 //---------------------------------------------------------------------------------------------------------------------------------
 
-
-int main(){
+int main()
+{
     int choix;
     do
     {
         printf("\n------ Menu ------\n");
-    printf("1. Ajouter des joueurs \n");
-    printf("2.  Afficher tous les joueurs\n");
-    printf("3. Supprimer un joueur\n");
-    printf("4. Modifier un joueur\n");
-    printf("5. Rechercher un joueur\n");
-    printf("6. Statistiques\n");
-    printf("0. Quitter\n");
-    printf("------------------\n");
-    printf("Votre choix : ");
+        printf("1. Ajouter des joueurs \n");
+        printf("2.  Afficher tous les joueurs\n");
+        printf("3. Supprimer un joueur\n");
+        printf("4. Modifier un joueur\n");
+        printf("5. Rechercher un joueur\n");
+        printf("6. Statistiques\n");
+        printf("0. Quitter\n");
+        printf("------------------\n");
+        printf("Votre choix : ");
 
-        if (scanf("%d", &choix)==0) {
+        if (scanf("%d", &choix) == 0)
+        {
             choix = 8;
-            while (getchar()!='\n');
+            while (getchar() != '\n')
+                ;
         }
 
         switch (choix)
